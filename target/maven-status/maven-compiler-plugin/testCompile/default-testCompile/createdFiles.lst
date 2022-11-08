@@ -1,0 +1,6 @@
+pages\LogInPage.class
+pages\RestaurantPage.class
+demo\RunCucumberTest.class
+pages\VenueListPage.class
+pages\VenueDetailPage.class
+demo\StepDefinitions.class
