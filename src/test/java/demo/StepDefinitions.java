@@ -9,6 +9,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
 import pages.LogInPage;
 import pages.RestaurantPage;
 import pages.VenueDetailPage;
@@ -53,7 +54,7 @@ public class StepDefinitions {
     @Given("I log in as {string} and {string}")
     public void logInAs(String username, String password) {
         logInPage.logInAs(username, password);
-        assertTrue(logInPage.isLogInSuccessful());
+        Assert.assertTrue(logInPage.isLogInSuccessful());
     }
 
     @When("I select to open {string}")

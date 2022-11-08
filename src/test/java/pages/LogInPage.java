@@ -45,7 +45,7 @@ public class LogInPage {
     }
 
     public void logInAs(String username, String password) {
-        String baseURL = System.getProperty("baseurl");
+        String baseURL = "https://demo.guru99.com/";
         this.driver.get(baseURL+PAGE_URL);
         txtUsername.sendKeys(username);
         txtPassword.sendKeys(password);
@@ -53,9 +53,9 @@ public class LogInPage {
     }
 
     public boolean isLogInSuccessful(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        WebElement lblHeadingOption = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[@class='loginConfirmation--heading']")));
-        return lblHeadingOption.getText().contains("You have successfully logged in");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebElement lblHeadingOption = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h3")));
+        return lblHeadingOption.getText().contains("Login Successfully");
     }
 
     public void selectOption(String option) {
