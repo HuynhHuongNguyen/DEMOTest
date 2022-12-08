@@ -14,6 +14,8 @@ iv. recorded in a video clip<br>
 ## 2. How to run:
 - navigate to the project folder: `$cd path/to/project`
 - run command line: `mvn test -Dbaseurl=https://demo.guru99.com/`
+mvn test -Dbaseurl=https://admin-dev.nowbookit.com/
+
 - change the `baseurl` if running the test on a different environment
 
 ## 3. The result:
